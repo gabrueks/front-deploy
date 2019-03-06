@@ -1,0 +1,42 @@
+{
+  "name": "front-social",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@atlaskit/button": "10.1.2",
+    "@atlaskit/checkbox": "5.0.14",
+    "@atlaskit/dropdown-menu": "6.1.26",
+    "@atlaskit/field-text": "7.1.0",
+    "@atlaskit/form": "5.1.6",
+    "@atlaskit/global-navigation": "5.7.1",
+    "@atlaskit/inline-message": "7.0.11",
+    "@atlaskit/layer-manager": "5.0.20",
+    "@atlaskit/modal-dialog": "7.2.3",
+    "@atlaskit/textfield": "0.1.6",
+    "axios": "0.18.0",
+    "react": "^16.8.2",
+    "react-activity-feed": "0.8.0",
+    "react-bottom-scroll-listener": "2.1.1",
+    "react-dom": "^16.8.2",
+    "react-router": "4.3.1",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "2.1.5",
+    "socket.io-client": "2.2.0",
+    "styled-components": "^3.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,127 @@
+*,*:before,*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    list-style: none;
+}
+.clean_button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    margin-bottom: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+ul.feed {
+    padding: 35px 30px;
+    color: #3b3b3b;
+    font-size: 15px;
+    border: 2px solid rgb(242, 242, 242);
+}
+ul.feed > li {
+    padding: 8px 15px;
+}
+ul.feed .feed-item-header { 
+    position: relative;
+}
+ul.feed .feed-item-header .user-information > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+ul.feed .feed-item-header .user-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+ul.feed .feed-item-header .user-image-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100% !important;
+    width: 100% !important;
+}
+ul.feed .feed-item-header .user-information .user-name {
+    margin-left: 12px;
+}
+ul.feed .feed-item-header .creation-date {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #cccccc;
+    font-size: 13px;
+}
+
+ul.feed .feed-item-body {
+    margin: 35px 0;
+}
+
+ul.feed .feed-item-body a {
+    color: #0b95be;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+ul.feed .feed-item-events .events-list{
+    margin-left: 0 -15px;
+}
+ul.feed .feed-item-events .event-list li {
+    display: inline-block;
+    margin-right: 8px;
+}
+ul.feed .feed-item-events .event-list li > .icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+ul.feed .feed-item-comments .comments-list{
+    margin: 20px 0 5px 0;
+}
+ul.feed .feed-item-comments li {
+    padding: 8px 25px;
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+ul.feed .feed-item-comments li .comment-creation-date{
+    color: #cccccc;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+ul.feed .feed-item-comments li .comment-description {
+    display: inline-block;
+}
+ul.feed .feed-item-comments li .comment-owner {
+    color: #0b95be;
+    font-weight: bolder;
+    margin-right: 4px;
+    display: inline-block;
+}
+ul.feed .feed-item-comments li .comment-description-text {
+    color: #5c5c5c;
+    display: inline-block;
+}
+ul.feed .feed-item-comments .feed-action {
+    display: block;
+    width: 100%;
+}
+ul.feed .feed-item-comments .feed-action .btn {
+    padding: 8px 0;
+    color: white;
+    width: 100%;
+    border: solid;
+    background-color: #E2E2E2 !important;
+    border-radius: 10px !important;
+}
+.load-button {
+    color: #969696
+}
