@@ -67,7 +67,7 @@ export default class FollowGroups extends Component {
         return (
             <div
             style= {{
-                marginLeft: '18%',
+                marginLeft: '19%',
                 marginTop: '2%',
                 marginRight: '3%',
                 position: 'relative'
