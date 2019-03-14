@@ -2,9 +2,11 @@ FROM node:latest
 
 RUN mkdir /app
 WORKDIR /app
-COPY /src /app/src
+COPY . .
 COPY ["package.json", "package-lock.json*", "./"]
 
-RUN npm install --production --silent && mv node_modules ../
+RUN npm install --production --silent
 
 EXPOSE 3000
+
+CMD ["npm", "start"]

@@ -69,15 +69,16 @@ export default class Feed extends Component {
 
     setTimeline = (e) => {
         this.setState({
-            timeline: document.getElementsByClassName('ItemParts__Content-sc-14xek3m-5 jRBaLt')[0].innerText,
-            trigger: document.getElementsByClassName('ItemParts__Content-sc-14xek3m-5 jRBaLt')[0].innerText
+            timeline: e.target.innerText,
+            trigger: e.target.innerText
         });
+        this.forceUpdate();
     }
 
      render() {
-        let dropDownItem = (this.state.subscriptions) ? this.state.subscriptions.map((subs) => (subs !== null) ? <DropdownItemRadio onClick={this.setTimeline} id={subs}>{subs}</DropdownItemRadio>: null) : null;
+        let dropDownItem = (this.state.subscriptions) ? this.state.subscriptions.map((subs, index) => (subs !== null) ? <DropdownItemRadio onClick={this.setTimeline} id={index}>{subs}</DropdownItemRadio>: null) : null;
         return (<div style={{
-            marginLeft: '15%',
+            marginLeft: '18%',
             marginTop: '2%',
             position: 'relative'
         }}>
@@ -118,7 +119,7 @@ export default class Feed extends Component {
                                 triggerType="button"
                                 isMenuFixed
                                 >
-                                <DropdownItemGroupRadio id="subscriptions">
+                                <DropdownItemGroupRadio id=" ">
                                     {dropDownItem}
                                 </DropdownItemGroupRadio>
                                 </DropdownMenuStateless>

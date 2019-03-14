@@ -51,7 +51,7 @@ export default class FollowPeople extends Component {
         return (
             <div
             style= {{
-                marginLeft: '15%',
+                marginLeft: '18%',
                 marginTop: '2%',
                 marginRight: '3%',
                 position: 'relative'

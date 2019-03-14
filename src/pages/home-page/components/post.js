@@ -11,12 +11,12 @@ export default class Post extends Component {
     comments;
     nextComments;
     componentWillMount() {
-        console.log(this.props);
         this.setState({
             isLiked: (this.props.value.latest_reactions.like === undefined) ? false : this.props.value.latest_reactions.like.filter((x) => x.user_id === window.localStorage.getItem('user')).length > 0,
             isLoading: false,
             hide: (this.props.value.latest_reactions.comment && this.props.value.latest_reactions.comment.length === 5 && this.props.value.latest_reactions_extra.comment.next !== '') ? false : true
         });
+        this.forceUpdate();
     }
 
     like = async () => {
@@ -30,10 +30,14 @@ export default class Post extends Component {
             this.state.isLoading = false;
             this.forceUpdate();
         } else {
-            this.props.value.reaction_counts.like++;
+            (this.props.value.reaction_counts.like) ? this.props.value.reaction_counts.like++ : this.props.value.reaction_counts.like = 1;
             this.state.isLiked = true;
             this.forceUpdate();
-            await likePost(this.state.isLiked, this.props.value.id, null);
+            const liked = await likePost(this.state.isLiked, this.props.value.id, null);
+            this.props.value.latest_reactions.like = [{
+                user_id: window.localStorage.getItem('user'),
+                id: liked.data.activityId
+            }];
             this.state.isLoading = false;
             this.forceUpdate();
         }

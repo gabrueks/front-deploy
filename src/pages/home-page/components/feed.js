@@ -31,11 +31,12 @@ export default class Feed extends Component {
             }
             this.forceUpdate();
         }).catch((err) => {
-            this.setState({ posts: null })
-            if (!err || !err.response || err.response.status === 401) {
-                window.localStorage.clear();
-                window.location.replace('/');
-            }
+            console.log(err);
+            // this.setState({ posts: null })
+            // if (!err || !err.response || err.response.status === 401) {
+            //     window.localStorage.clear();
+            //     window.location.replace('/');
+            // }
         })
     }
     render () {

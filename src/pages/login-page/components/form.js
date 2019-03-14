@@ -15,7 +15,7 @@ import InlineMessage from '@atlaskit/inline-message';
 import Modal, { ModalTransition } from '@atlaskit/modal-dialog';
 import { Redirect } from 'react-router';
 
-import { loginUser, forgetPassword } from '../../../services/authServices';
+import { loginUser } from '../../../services/authServices';
 import { Component } from 'react';
 import Textfield from '@atlaskit/textfield';
 
@@ -39,16 +39,10 @@ export default class FormLogin extends Component {
 
   forgetPassword = (e) => {
     if (e && e.key === 'Enter') {
-      forgetPassword({
-        email: document.getElementById('email-reset').value
-      });
       this.setState({
         modal: false
       })
     } else {
-      forgetPassword({
-        email: document.getElementById('email-reset').value
-      });
       this.setState({
         modal: false
       })

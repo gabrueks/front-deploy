@@ -52,9 +52,10 @@ export default class FollowGroups extends Component {
         if (event.key === 'Enter') {
             createGroup(event.target.value)
                 .then((data) =>{
+                    console.log(data.status);
                     if (data.status === 201) {
                         this.setState({
-                            createGroup: true,
+                            createdGroup: true
                         })
                         this.forceUpdate();
                     }
@@ -66,7 +67,7 @@ export default class FollowGroups extends Component {
         return (
             <div
             style= {{
-                marginLeft: '15%',
+                marginLeft: '18%',
                 marginTop: '2%',
                 marginRight: '3%',
                 position: 'relative'
@@ -75,7 +76,7 @@ export default class FollowGroups extends Component {
                 <Textfield onKeyPress={this.handleKeyPress}/>
                 {(this.state.messageError) ? <span>Use only letters.</span> : <span></span>}
                 {(this.state.userNotFound) ? <span>Group not found.</span> : <span></span>}
-                {(this.state.followed) ? <span>Group followed.</span> : <span></span>}
+                {(this.state.followed) ? <span>Group followed.<br></br></span> : <span></span>}
                 Create a group!
                 <Textfield onKeyPress={this.handleKeyPressCreate}/>
                 {(this.state.createdGroup) ? <span>Group Created.</span> : <span></span>}

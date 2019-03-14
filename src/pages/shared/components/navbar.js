@@ -3,7 +3,7 @@ import { colors } from '@atlaskit/theme';
 
 import { SortableItem, SortableGroup, SortableContext } from '@atlaskit/navigation-next';
 
-const CONTENT_NAV_WIDTH = window.innerWidth / 10;
+const CONTENT_NAV_WIDTH = (window.innerWidth / 10) + 60;
 const CONTENT_NAV_HEIGHT = window.innerHeight;
 
 const SectionWrapper = (props: *) => (
