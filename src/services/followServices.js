@@ -1,6 +1,6 @@
 import * as axios from 'axios';
 
-const DEFAULT_URL = 'https://cocky-bohr-227205.netlify.com';
+const DEFAULT_URL = 'https://blooming-taiga-15572.herokuapp.com';
 
 
 export const createGroup = async (name) => {
