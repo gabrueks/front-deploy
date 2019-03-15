@@ -1,6 +1,6 @@
 import * as axios from 'axios';
 
-const DEFAULT_URL = 'http://localhost:8080';
+const DEFAULT_URL = 'https://cocky-bohr-227205.netlify.com';
 
 export const createUser = async (data) => {
     return await axios.post(`${DEFAULT_URL}/api/v1/signup`, data);
